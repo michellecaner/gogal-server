@@ -1,0 +1,66 @@
+[
+  {
+      "model": "gogalapi.trip",
+      "pk": 1,
+      "fields": {
+          "title": "Turkey 2019",
+          "image_url_one": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+          "image_url_two": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+          "image_url_three": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+          "country": "Turkey",
+          "city": "Many",
+          "from_date": "2019-08-17",
+          "to_date": "2019-09-08",
+          "content": "Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac suscipit leo. Carpe diem vulputate est nec commodo rutrum. Pellentesque mattis convallis nisi eu and I ain’t stoppin until the swear jar’s full. Ut rhoncus velit at mauris interdum, fringilla dictum neque rutrum. Curabitur mattis odio at erat viverra lobortis. Poppin’ bottles on the ice, tristique suscipit mauris elementum tempus. Quisque ut felis vitae elit tempor interdum viverra a est.",
+          "user": 1
+      }
+  },
+  {
+    "model": "gogalapi.trip",
+    "pk": 2,
+    "fields": {
+        "title": "Miami 2022",
+        "image_url_one": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "image_url_two": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "image_url_three": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "country": "USA",
+        "city": "Miami",
+        "from_date": "2022-08-10",
+        "to_date": "2022-08-14",
+        "content": "Donec accumsan consectetur faucibus. YOLO, you only live once. Donec eget semper eros. Vestibulum lobortis eros vel elementum suscipit. Nunc tempus lectus elit, et faucibus ligula dignissim nec. Phasellus in turpis porta, laoreet sapien vitae, auctor ante.",
+        "user": 1
+    }
+},
+{
+    "model": "gogalapi.trip",
+    "pk": 3,
+    "fields": {
+        "title": "NYE 2021",
+        "image_url_one": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "image_url_two": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "image_url_three": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "country": "USA",
+        "city": "Sneedsville",
+        "from_date": "2021-12-31",
+        "to_date": "2022-01-02",
+        "content": "https://yoloipsum.wordpress.com/",
+        "user": 1
+    }
+},
+{
+    "model": "gogalapi.trip",
+    "pk": 1,
+    "fields": {
+        "title": "Milwaukee 2021",
+        "image_url_one": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "image_url_two": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "image_url_three": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
+        "country": "USA",
+        "city": "Milwaukee",
+        "from_date": "2021-07-01",
+        "to_date": "2021-07-05",
+        "content": "Aliquam sed enim faucibus, pulvinar felis at, vulputate augue. Ten, ten, twenties on them fifties, trick, at tempus libero fermentum id. Vivamus ut nisi dignissim, condimentum urna vel, dictum massa. Donec justo yolo, rutrum vitae dui in, dapibus tempor tellus. I do it big. Fusce ut sagittis mi: https://yoloipsum.wordpress.com/",
+        "user": 3
+    }
+}
+]

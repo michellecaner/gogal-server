@@ -1,0 +1,35 @@
+[
+  {
+      "model": "gogalapi.gogaluser",
+      "pk": 1,
+      "fields": {
+          "bio": "My name is Michelle. I live in Nashville by way of NYC with an appetite for the world!",
+          "profile_img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJlFy--AHExwNT-a7QqE3V85OtTLclVVPtA&usqp=CAU",
+          "created_on": "2022-09-02",
+          "active": true,
+          "user": 1
+      }
+  },
+  {
+      "model": "gogalapi.gogaluser",
+      "pk": 2,
+      "fields": {
+          "bio": "Hello World! I'm Rebecca & I have a passion for solo female travel.",
+          "profile_img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJlFy--AHExwNT-a7QqE3V85OtTLclVVPtA&usqp=CAU",
+          "created_on": "2022-09-02",
+          "active": true,
+          "user": 2
+      }
+  },
+  {
+      "model": "gogalapi.gogaluser",
+      "pk": 3,
+      "fields": {
+          "bio": "Tara is my name and traveling the world is my game!",
+          "profile_img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJlFy--AHExwNT-a7QqE3V85OtTLclVVPtA&usqp=CAU",
+          "created_on": "2022-09-02",
+          "active": true,
+          "user": 3
+      }
+  }
+]

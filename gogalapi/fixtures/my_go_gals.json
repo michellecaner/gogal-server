@@ -1,0 +1,26 @@
+[
+  {
+      "model": "gogalapi.mygogal",
+      "pk": 1,
+      "fields": {
+          "go_gal_pick": 2,
+          "go_gal_picker": 1
+      }
+  },
+  {
+      "model": "gogalapi.mygogal",
+      "pk": 2,
+      "fields": {
+          "go_gal_pick": 3,
+          "go_gal_picker": 1
+      }
+  },
+  {
+      "model": "gogalapi.mygogal",
+      "pk": 3,
+      "fields": {
+          "go_gal_pick": 3,
+          "go_gal_picker": 2
+      }
+  }
+]

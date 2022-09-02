@@ -1,0 +1,39 @@
+[
+  {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+          "first_name": "Michelle",
+          "last_name": "Caner",
+          "email": "michelle@michelle.com",
+          "username": "mcaner",
+          "password": "michelle123",
+          "is_staff": false
+      }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "first_name": "Rebecca",
+        "last_name": "Wolfe",
+        "email": "rebecca@rebecca.com",
+        "username": "rwolfe",
+        "password": "rebecca123",
+        "is_staff": false
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "first_name": "Tara",
+        "last_name": "Foster",
+        "email": "tara@tara.com",
+        "username": "tfoster",
+        "password": "tara123",
+        "is_staff": false
+    }
+  }
+  
+]
