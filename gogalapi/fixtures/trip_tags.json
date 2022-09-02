@@ -1,0 +1,34 @@
+[
+  {
+      "model": "gogalapi.triptag",
+      "pk": 1,
+      "fields": {
+          "tag": 2,
+          "trip": 1
+      }
+  },
+  {
+      "model": "gogalapi.triptag",
+      "pk": 2,
+      "fields": {
+        "tag": 1,
+        "trip": 2
+      }
+  },
+  {
+      "model": "gogalapi.triptag",
+      "pk": 3,
+      "fields": {
+        "tag": 9,
+        "trip": 3
+      }
+  },
+  {
+      "model": "gogalapi.triptag",
+      "pk": 4,
+      "fields": {
+        "tag": 4,
+        "trip": 4
+    }
+  }
+]

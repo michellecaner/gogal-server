@@ -1,0 +1,34 @@
+[
+  {
+      "model": "gogalapi.tripcategory",
+      "pk": 1,
+      "fields": {
+          "category": 6,
+          "trip": 1
+      }
+  },
+  {
+      "model": "gogalapi.tripcategory",
+      "pk": 2,
+      "fields": {
+        "category": 1,
+        "trip": 2
+      }
+  },
+  {
+      "model": "gogalapi.tripcategory",
+      "pk": 3,
+      "fields": {
+        "category": 1,
+        "trip": 3
+      }
+  },
+  {
+      "model": "gogalapi.tripcategory",
+      "pk": 4,
+      "fields": {
+        "category": 1,
+        "trip": 4
+    }
+  }
+]

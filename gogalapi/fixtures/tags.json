@@ -1,0 +1,65 @@
+[
+  {
+      "model": "gogalapi.tag",
+      "pk": 1,
+      "fields": {
+          "label": "Solo Travel"
+      }
+  },
+  {
+      "model": "gogalapi.tag",
+      "pk": 2,
+      "fields": {
+          "label": "Minimalist Travel"
+      }
+  },
+  {
+      "model": "gogalapi.tag",
+      "pk": 3,
+      "fields": {
+          "label": "Digital Nomad"
+      }
+  }, 
+  {
+    "model": "gogalapi.tag",
+    "pk": 4,
+    "fields": {
+        "label": "Air Travel"
+    }
+  }, 
+  {
+    "model": "gogalapi.tag",
+    "pk": 5,
+    "fields": {
+        "label": "Bus Travel"
+    }
+  },
+  {
+    "model": "gogalapi.tag",
+    "pk": 6,
+    "fields": {
+        "label": "Rail Travel"
+    }
+  },
+  {
+    "model": "gogalapi.tag",
+    "pk": 7,
+    "fields": {
+        "label": "Boat Travel"
+    }
+  }, 
+  {
+    "model": "gogalapi.tag",
+    "pk": 8,
+    "fields": {
+        "label": "Long Term Travel"
+    }
+  },
+  {
+    "model": "gogalapi.tag",
+    "pk": 9,
+    "fields": {
+        "label": "Weekend Getaways"
+    }
+  }
+]
