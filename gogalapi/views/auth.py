@@ -50,6 +50,9 @@ def register_user(request):
     
     go_gal_user = GoGalUser.objects.create(
           bio=request.data["bio"],
+          profile_img_url=request.data["profile_img_url"],
+        #   created_on=request.data["created_on"],
+        #   active=request.data["active"],
           user=new_user
     )
     
