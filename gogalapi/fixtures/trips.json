@@ -49,7 +49,7 @@
 },
 {
     "model": "gogalapi.trip",
-    "pk": 1,
+    "pk": 4,
     "fields": {
         "title": "Milwaukee 2021",
         "image_url_one": "https://cdn-icons-png.flaticon.com/512/854/854894.png",
