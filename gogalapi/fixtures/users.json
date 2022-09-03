@@ -8,7 +8,13 @@
           "email": "michelle@michelle.com",
           "username": "mcaner",
           "password": "michelle123",
-          "is_staff": false
+          "is_staff": false,
+          "is_superuser": false,
+          "is_active": true,
+          "date_joined": "2022-09-02T14:51:39.989Z",
+          "last_login": null,
+          "groups": [],
+          "user_permissions": []
       }
   },
   {
@@ -20,7 +26,13 @@
         "email": "rebecca@rebecca.com",
         "username": "rwolfe",
         "password": "rebecca123",
-        "is_staff": false
+        "is_staff": false,
+        "is_superuser": false,
+        "is_active": true,
+        "date_joined": "2022-09-02T14:52:39.989Z",
+        "last_login": null,
+        "groups": [],
+        "user_permissions": []
     }
   },
   {
@@ -32,8 +44,13 @@
         "email": "tara@tara.com",
         "username": "tfoster",
         "password": "tara123",
-        "is_staff": false
+        "is_staff": false,
+        "is_superuser": false,
+        "is_active": true,
+        "date_joined": "2022-09-02T14:53:39.989Z",
+        "last_login": null,
+        "groups": [],
+        "user_permissions": []
     }
   }
-  
 ]
