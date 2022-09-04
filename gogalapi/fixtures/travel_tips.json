@@ -1,0 +1,65 @@
+[
+  {
+      "model": "gogalapi.traveltip",
+      "pk": 1,
+      "fields": {
+          "tip": "Make 2 copies of passport, credit cards, travel documents and emergency contacts. Take one copy with you and hide somewhere safe (like a money belt) and leave another copy with a trusted source back home."
+      }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 2,
+    "fields": {
+        "tip": "Invest in a water bottle with built in filter. Now you can drink from anywhere and waste less!"
+    }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 3,
+    "fields": {
+        "tip": "Research ratings for accommodations and make sure there are positive reviews across multiple sites."
+    }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 4,
+    "fields": {
+        "tip": "YouTube is your friend! Watch videos to get an idea if a location is the fit for you and to get a sense of what neighborhoods you may want to visit or stay in."
+    }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 5,
+    "fields": {
+        "tip": "Bring a versatile garment like a sarong which can be used as a towel, light blanket or a cover up in more conservative areas. Plus, it packs small!"
+    }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 6,
+    "fields": {
+        "tip": "Leave your valuables at home - including jewelry."
+    }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 7,
+    "fields": {
+        "tip": "Get up early to make the most of your day and know what time it gets dark so you can be at your planned destination rather than still wandering around. This doesn’t mean you have to be locked in your room by 6pm: just be at a restaurant or bar rather than en route."
+    }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 8,
+    "fields": {
+        "tip": "Be discerning but talk to locals as well as other travelers and make new friends!"
+    }
+  },
+  {
+    "model": "gogalapi.traveltip",
+    "pk": 9,
+    "fields": {
+        "tip": "Download offline maps so you don't have to depend on WiFi for access."
+    }
+  }
+]
