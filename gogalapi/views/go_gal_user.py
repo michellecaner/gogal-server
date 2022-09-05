@@ -37,6 +37,6 @@ class GoGalUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = GoGalUser
         fields = ("id", "bio", "profile_img_url", "created_on")
-        depth = 2
+        depth = 1
         
         # What if I wanted to show their name & email from the User model? Or would I take care of that on the front end? This feels related to my question on my trip serializer too.
