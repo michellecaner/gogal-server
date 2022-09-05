@@ -36,4 +36,4 @@ class MyGoGalSerializer(serializers.ModelSerializer):
     """JSON serializer for My Go Gals"""
     class Meta:
         model = MyGoGal
-        fields = ("id", "go_gal_pick", "go_gal_picker")
+        fields = ["id", "go_gal_pick", "go_gal_picker"]
