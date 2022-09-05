@@ -44,6 +44,18 @@ class TagView(ViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    def update(self, request, pk):
+        """Handle PUT requests for a tag
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        tag = Tag.objects.get(pk=pk)
+        serializer = CreateTagSerializer(tag, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
       
 class TagSerializer(serializers.ModelSerializer):
     """JSON serializer for categories"""
