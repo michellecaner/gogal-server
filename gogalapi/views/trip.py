@@ -5,6 +5,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from gogalapi.models import Trip
+from gogalapi.models import GoGalUser
 
 class TripView(ViewSet):
     """Go Gal trip view"""
@@ -28,16 +29,33 @@ class TripView(ViewSet):
         Returns:
             Response -- JSON serialized list of trips
         """
-        trips = Trip.objects.all()
+        trips = Trip.objects.all().order_by("title")
         serializer = TripSerializer(trips, many=True)
         return Response(serializer.data)
-      
+    
+    def create(self, request):
+        """Handle POST operations for new trip
+
+        Returns
+            Response -- JSON serialized trip instance
+        """
+        user = GoGalUser.objects.get(user=request.auth.user)
+        serializer = CreateTripSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=user)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+          
 class TripSerializer(serializers.ModelSerializer):
     """JSON serializer for trips"""
     class Meta:
         model = Trip
-        fields = ("id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user_id")
-        depth = 2
+        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user_id"]
+        depth = 1
         
         # Why can't I see nested data with the added use of depth? Shouldn't I see the details on the user?
+        
+class CreateTripSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Trip
+        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user_id"]   
         
