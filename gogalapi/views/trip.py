@@ -1,5 +1,6 @@
 """View module for handling requests about trips"""
 
+from logging import raiseExceptions
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -45,11 +46,23 @@ class TripView(ViewSet):
         serializer.save(user=user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
+    def update(self, request, pk):
+        """Handle PUT requests for a trip
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        trip = Trip.objects.get(pk=pk)
+        serializer = CreateTripSerializer(trip, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
     def destroy(self, request, pk):
         trip = Trip.objects.get(pk=pk)
         trip.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-          
+        
 class TripSerializer(serializers.ModelSerializer):
     """JSON serializer for trips"""
     class Meta:
