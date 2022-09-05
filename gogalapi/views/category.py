@@ -15,9 +15,12 @@ class CategoryView(ViewSet):
         Returns:
             Response -- JSON serialized category
         """
-        category = Category.objects.get(pk=pk)
-        serializer = CategorySerializer(category)
-        return Response(serializer.data)
+        try:
+            category = Category.objects.get(pk=pk)
+            serializer = CategorySerializer(category)
+            return Response(serializer.data)
+        except Category.DoesNotExist as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
       
     def list(self, request):
         """Handle GET requests to get ALL categories
@@ -25,7 +28,7 @@ class CategoryView(ViewSet):
         Returns:
             Response -- JSON serialized list of categories
         """
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by('label')
         serializer = CategorySerializer(categories, many=True)
         return Response(serializer.data)
       
