@@ -36,5 +36,5 @@ class TripTagSerializer(serializers.ModelSerializer):
     """JSON serializer for trip tags"""
     class Meta:
         model = TripTag
-        fields = ("id", "tag_id", "trip_id")
+        fields = ["id", "tag_id", "trip_id"]
         depth = 2

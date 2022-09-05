@@ -5,6 +5,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from gogalapi.models import Tag
+# from gogalapi.models import GoGalUser
 
 class TagView(ViewSet):
     """Go Gal tag view"""
@@ -31,9 +32,26 @@ class TagView(ViewSet):
         tags = Tag.objects.all().order_by('label')
         serializer = TagSerializer(tags, many=True)
         return Response(serializer.data)
+    
+    def create(self, request):
+        """Handle POST operations for new tag
+
+        Returns
+            Response -- JSON serialized tag instance
+        """
+        # user = GoGalUser.objects.get(user=request.auth.user)
+        serializer = CreateTagSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
       
 class TagSerializer(serializers.ModelSerializer):
     """JSON serializer for categories"""
     class Meta:
         model = Tag
-        fields = ("id", "label")
+        fields = ["id", "label"]
+        
+class CreateTagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = ["id", "label"]  

@@ -36,6 +36,6 @@ class TravelTipSerializer(serializers.ModelSerializer):
     """JSON serializer for travel tips"""
     class Meta:
         model = TravelTip
-        fields = ("id", "tip")
+        fields = ["id", "tip"]
 
       
