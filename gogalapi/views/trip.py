@@ -73,5 +73,5 @@ class TripSerializer(serializers.ModelSerializer):
 class CreateTripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user_id"]   
+        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user"]   
         
