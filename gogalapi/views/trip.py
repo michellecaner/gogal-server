@@ -67,10 +67,8 @@ class TripSerializer(serializers.ModelSerializer):
     """JSON serializer for trips"""
     class Meta:
         model = Trip
-        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user_id"]
-        depth = 1
-        
-        # Why can't I see nested data with the added use of depth? Shouldn't I see the details on the user?
+        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user"]
+        depth = 2
         
 class CreateTripSerializer(serializers.ModelSerializer):
     class Meta:

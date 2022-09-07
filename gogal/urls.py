@@ -30,13 +30,13 @@ from gogalapi.views import TripTagView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'categories', CategoryView, "category")
-router.register(r'go_gal_users', GoGalUserView, "go_gal_user")
-router.register(r'my_go_gals', MyGoGalView, "my_go_gal")
+router.register(r'gogalusers', GoGalUserView, "gogaluser")
+router.register(r'mygogals', MyGoGalView, "mygogal")
 router.register(r'tags', TagView, "tag")
-router.register(r'travel_tips', TravelTipView, "travel_tip")
+router.register(r'traveltips', TravelTipView, "traveltip")
 router.register(r'trips', TripView, "trip")
-router.register(r'trip_categories', TripCategoryView, "trip_category")
-router.register(r'trip_tags', TripTagView, "trip_tag")
+router.register(r'tripcategories', TripCategoryView, "tripcategory")
+router.register(r'triptags', TripTagView, "triptag")
 
 
 urlpatterns = [
