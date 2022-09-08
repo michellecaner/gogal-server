@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from gogalapi.models import Trip
 from gogalapi.models import GoGalUser
+from gogalapi.models.category import Category
 
 class TripView(ViewSet):
     """Go Gal trip view"""
@@ -41,9 +42,17 @@ class TripView(ViewSet):
             Response -- JSON serialized trip instance
         """
         user = GoGalUser.objects.get(user=request.auth.user)
+        categories = request.data.get("categories")
+        if categories: 
+            del request.data["categories"]
         serializer = CreateTripSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(user=user)
+        trip = Trip.objects.get(pk=serializer.data["id"])
+        if categories:
+            for id in categories:
+                category = Category.objects.get(pk=id)
+                trip.categories.add(category)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def update(self, request, pk):
@@ -73,5 +82,5 @@ class TripSerializer(serializers.ModelSerializer):
 class CreateTripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user_id"]   
+        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content"]   
         
