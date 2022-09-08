@@ -1,4 +1,5 @@
 from django.db import models
+from gogalapi.models.category import Category
 from gogalapi.models.go_gal_user import GoGalUser
 
 class Trip(models.Model):
@@ -13,5 +14,6 @@ class Trip(models.Model):
     from_date = models.DateField(auto_now=False, auto_now_add=False)
     to_date = models.DateField(auto_now=False, auto_now_add=False)
     content = models.CharField(max_length=25000)
+    categories = models.ManyToManyField(Category, related_name="trips")
     
     #In the future, I could make a separate Images table with a trip_id

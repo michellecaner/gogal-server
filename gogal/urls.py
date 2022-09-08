@@ -24,7 +24,6 @@ from gogalapi.views import MyGoGalView
 from gogalapi.views import TagView
 from gogalapi.views import TravelTipView
 from gogalapi.views import TripView
-from gogalapi.views import TripCategoryView
 from gogalapi.views import TripTagView
 
 
@@ -35,7 +34,6 @@ router.register(r'mygogals', MyGoGalView, "mygogal")
 router.register(r'tags', TagView, "tag")
 router.register(r'traveltips', TravelTipView, "traveltip")
 router.register(r'trips', TripView, "trip")
-router.register(r'tripcategories', TripCategoryView, "tripcategory")
 router.register(r'triptags', TripTagView, "triptag")
 
 
