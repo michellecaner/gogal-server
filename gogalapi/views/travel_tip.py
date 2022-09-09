@@ -37,5 +37,3 @@ class TravelTipSerializer(serializers.ModelSerializer):
     class Meta:
         model = TravelTip
         fields = ["id", "tip"]
-
-      

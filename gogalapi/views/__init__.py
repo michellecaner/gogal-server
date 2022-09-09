@@ -5,4 +5,3 @@ from gogalapi.views.my_go_gal import MyGoGalView
 from gogalapi.views.tag import TagView
 from gogalapi.views.travel_tip import TravelTipView
 from gogalapi.views.trip import TripView
-from gogalapi.views.trip_tag import TripTagView

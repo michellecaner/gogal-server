@@ -1,6 +1,7 @@
 """View module for handling requests about trips"""
 
 from logging import raiseExceptions
+from re import T
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -8,6 +9,7 @@ from rest_framework import serializers, status
 from gogalapi.models import Trip
 from gogalapi.models import GoGalUser
 from gogalapi.models.category import Category
+from gogalapi.models.tag import Tag
 
 class TripView(ViewSet):
     """Go Gal trip view"""
@@ -43,8 +45,11 @@ class TripView(ViewSet):
         """
         user = GoGalUser.objects.get(user=request.auth.user)
         categories = request.data.get("categories")
+        tags = request.data.get("tags")
         if categories: 
             del request.data["categories"]
+        if tags:
+            del request.data["tags"]
         serializer = CreateTripSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(user=user)
@@ -53,6 +58,10 @@ class TripView(ViewSet):
             for id in categories:
                 category = Category.objects.get(pk=id)
                 trip.categories.add(category)
+        if tags:
+            for id in tags:
+                tag = Tag.objects.get(pk=id)
+                trip.tags.add(tag)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def update(self, request, pk):
