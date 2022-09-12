@@ -85,11 +85,12 @@ class TripSerializer(serializers.ModelSerializer):
     """JSON serializer for trips"""
     class Meta:
         model = Trip
-        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user"]
+        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "user", "categories", "tags"]
         depth = 2
         
 class CreateTripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content"]   
+        fields = ["id", "title", "image_url_one", "image_url_two", "image_url_three", "country", "city", "from_date", "to_date", "content", "categories", "tags"]   
+        depth = 2
         
