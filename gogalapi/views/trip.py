@@ -71,6 +71,16 @@ class TripView(ViewSet):
             Response -- Empty body with 204 status code
         """
         trip = Trip.objects.get(pk=pk)
+        trip_categories = trip.categories.all()
+        categories = request.data.get("categories")
+        for id in trip_categories:
+            trip.categories.remove(id)
+        if categories: 
+            del request.data["categories"]
+        if categories:
+            for id in categories:
+                category = Category.objects.get(pk=id)
+                trip.categories.add(category)
         serializer = CreateTripSerializer(trip, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
